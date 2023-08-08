@@ -1,0 +1,148 @@
+/* ----------Faixa na tela---------- */
+  
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  
+  .terco-da-tela {
+    width: 33.33%; /* Define a largura para 33.33% da largura da tela */
+    background-color: #248EB6; /* Cor de fundo para o terço da tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    float: left; /* Faz com que a div fique à esquerda para ocupar o espaço horizontalmente */
+  }
+  
+  .img-fluid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 34%;
+    height: 100px; /* Altura do rodapé */
+  }
+
+/* ----------Filtro---------- */
+.apresentacao{
+    padding-left: 15px;
+
+}
+.apresentacao h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: #248EB6;
+    font-weight: bold
+  }
+
+.titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filtro label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filtro select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filtro .button__apresentacao {
+  margin-left: 125px;
+  margin-top: 30px;
+}
+
+
+.button__apresentacao {
+  display: inline-block;
+  padding: 0.45rem 1.25rem;
+  border-radius: 10rem;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.button__apresentacao:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #248EB6;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.button__apresentacao:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #D3ECF5;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.button__apresentacao:hover {
+  color: black;
+}
+
+.button__apresentacao:hover:before {
+  width: 100%;
+}
+/* ----------tabela---------- */
+
+.subTitulos, .Titulos, .conteudo {
+  display: inline-flex;
+}
+
+ .Titulos {
+  border-bottom: 1px solid black;
+  
+} 
+.subTitulos {
+  font-size: 20px;
+  color: #248EB6;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  border-right: 1px solid black;
+
+
+}
+/* .Titulos .subTitulos span {
+  border: 5px solid red;
+} */
+
+/* .conteudo {
+  border: 5px solid black;
+} */
+.assunto {
+  border-right: 1px solid black;
+  padding: 20px;
+
+}
