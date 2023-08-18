@@ -43,3 +43,10 @@
     border-radius: 30px;
     padding: 8px 30px !important;
   }
+
+  .navbar-nav .sair {
+    color: #fff !important;
+    background-color: #ad0000;
+    border-radius: 30px;
+    padding: 8px 30px !important;
+  }
