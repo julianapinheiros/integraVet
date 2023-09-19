@@ -127,22 +127,18 @@ body, html {
   font-size: 20px;
   color: #248EB6;
   font-weight: bold;
+  justify-content: flex-start;
   font-style: italic;
-  text-align: center;
-  padding: 20px;
+  padding: 20px 0 20px 12px;
   border-right: 1px solid black;
-
-
 }
-/* .Titulos .subTitulos span {
-  border: 5px solid red;
-} */
 
-/* .conteudo {
-  border: 5px solid black;
-} */
+.subTitulos span {
+  text-align: center;
+}
+
 .assunto {
   border-right: 1px solid black;
-  padding: 20px;
+  padding: 20px 0 20px 12px;
 
 }

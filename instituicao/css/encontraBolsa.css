@@ -129,8 +129,9 @@ body, html {
   font-weight: bold;
   font-style: italic;
   text-align: center;
-  padding: 20px;
   border-right: 1px solid black;
+  justify-content: center;
+  padding: 20px 0;
 
 
 }

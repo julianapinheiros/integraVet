@@ -1,0 +1,19 @@
+/* ----------Campanhas---------- */
+.card-img-top{
+  max-width: 100%;
+  height: 500px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
+}
+
+.card-body h5{
+  text-align: center;
+}
+.card-body p{
+  text-align: justify;
+}
+
+.card-img-top:hover{
+  transform: scale(0.9);
+
+}
