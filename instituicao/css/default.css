@@ -16,7 +16,7 @@
 .subTitulos, .conteudo {
   display: inline-flex;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 .subTitulos {  
@@ -25,6 +25,26 @@
   color: #248EB6;
   font-weight: bold;
   font-style: italic;
+}
+
+.row-line input {
+  width: 60px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+.row-line input::-webkit-outer-spin-button,
+.row-line input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.row-line .btn-qty-manipulation {
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .btn.btn-primary {

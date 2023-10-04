@@ -28,7 +28,7 @@
 }
 
 .formulario label {
-    margin-top: 30px;
+    margin-top: 14px;
     display: block;
     margin-bottom: 10px;
 }
@@ -69,7 +69,6 @@ input[type="submit"] {
     font-size: 16px;
     cursor: pointer;
 }
-
 
 .button__apresentacao {
     display: inline-block;
