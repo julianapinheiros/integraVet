@@ -1,13 +1,29 @@
+<?php
+    session_start();
+    
+    if ((!isset($_SESSION['id']) == true) &&
+        (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['id']);
+        unset($_SESSION['senha']);
+
+        header('Location: ../tutores/Default.html');
+    }
+
+    $logado = $_SESSION['id'];
+
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>IntegraVet</title>
+    <title>IntegraVet-Login</title>
     <link href="css/default.css" rel="stylesheet" type="text/css" />
     <link href="../cssPadrao/header.css" rel="stylesheet" type="text/css" />
-    <link href="../cssPadrao/geral.css" rel="stylesheet" type="text/css" />    
+    <link href="../cssPadrao/geral.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -17,35 +33,32 @@
     <script defer="defer" src="../jsPadrao/menu.js"></script>
 
 </head>
-
-  
 <body>
-    <!-- <iframe src="../header.html" width="100%" frameborder="0" height="auto"></iframe> -->
     <div class="bg-light">
         <div class="container menu">
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="../tutores/Default.html"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
+                            <a class="navbar-brand" href="../veterinario/Default.html"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="../tutores/Default.html">Home</a>
+                                        <a class="nav-link active" aria-current="page" href="Default.html">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="../tutores/Contatos.html">Contatos</a>
+                                        <a class="nav-link" href="SaibaMais.html">Saiba Mais</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="../tutores/SaibaMais.html">Saiba Mais</a>
+                                        <a class="nav-link" href="EncontrarBolsa.php">Encontrar Bolsas</a>
                                     </li>
                                 </ul>
-                                <ul class="navbar-nav login" aling="text-rigt">
+                                <ul class="navbar-nav sair" aling="text-rigt">
                                     <li class="nav-item">
-                                        <a class="nav-link active login" aria-current="page" href="../PrincipalPadrao/Login.html">Login</a>
+                                        <a class="nav-link active sair" aria-current="page" href="logout.php">Sair</a>
                                     </li>
                                 </ul>
                             </div>
@@ -55,7 +68,6 @@
             </div>
         </div>
     </div>
-
     <div class="container introducao mt-5">
         <div class="row apresentacao">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
@@ -74,7 +86,7 @@
                     <span>É profissional da área e gostaria de acessar os recursos? Clique em "Acessar" e cadastre-se.</span>
                 </div>
                 <div class="col-12 mt-3">
-                    <a href="../PrincipalPadrao/Cadastro.html" class="button__apresentacao">Acessar</a>
+                    <a href="../instituicao/cadastro.html" class="button__apresentacao">Acessar</a>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
@@ -178,11 +190,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
-
-<!--link do site exemplo: https://www.behance.net/gallery/165932005/Pet-Care-Website-Landing-page-Design?tracking_source=search_projects%7Clanding+page+veterinary
-
-link do responsivo: https://www.w3schools.com/cssref/tryit.php?filename=trycss3_media_bg
-
-link de ideia pagina de contatos: https://prosangue.sp.gov.br/hemocentros/

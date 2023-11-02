@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 
 <head>    
@@ -50,14 +50,14 @@
     <div class="container login">
         <div class="row">
             <div class="col-12">
-                <form class="login-form" action="/login" method="post">
+                <form class="login-form" action="teste.php" method="POST">
                     <div class="input-group">
-                        <label for="crm_cnpj">CRMV ou CNPJ:</label>
-                        <input type="text" id="crm_cnpj" name="crm_cnpj" required>
+                        <label for="id">CRMV ou CNPJ:</label>
+                        <input type="text" id="id" name="id" autocomplete="off" required>
                     </div>
                     <div class="input-group">
                         <label for="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha" required>
+                        <input type="password" id="senha" name="senha" autocomplete="off" required>
                         <span class="show-password-icon" onclick="togglePasswordVisibility()">
                             <!-- Ícone de olho fechado -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
@@ -66,12 +66,11 @@
                                 <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
                             </svg>
                         </span>
-                        <span><a href="../instituicao/cadastro.html" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primeiro Acesso?</a></span>
+                        <span><a href="../PrincipalPadrao/Cadastro.php" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primeiro Acesso?</a></span>
                     </div>
-                    <a href="Default.html" type="submit" class="button__apresentacao">Acessar</a></li>
+                    <input type="submit" name="submit" class="button__apresentacao" value="Acessar"></li>
                 </form>
-            </div> 
-        </div>        
+            </div>        
     </div>
     <div class="imagem">
         <img src="../imagens/Login1.png" class="img-fluid" alt="campanha">

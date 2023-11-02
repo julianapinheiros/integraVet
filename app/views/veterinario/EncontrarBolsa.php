@@ -1,3 +1,19 @@
+<?php
+    session_start();
+    
+    if ((!isset($_SESSION['id']) == true) &&
+        (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['id']);
+        unset($_SESSION['senha']);
+
+        header('Location: ../tutores/Default.html');
+    }
+
+    $logado = $_SESSION['id'];
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -45,7 +61,7 @@
                                 </ul>
                                 <ul class="navbar-nav sair" aling="text-rigt">
                                     <li class="nav-item">
-                                        <a class="nav-link active sair" aria-current="page" href="../tutores/Default.html">Sair</a>
+                                        <a class="nav-link active sair" aria-current="page" href="logout.php">Sair</a>
                                     </li>
                                 </ul>
                             </div>
