@@ -19,7 +19,6 @@
 <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>IntegraVet</title>
     <link href="css/cadBolsa.css" rel="stylesheet" type="text/css" />
     <link href="../cssPadrao/header.css" rel="stylesheet" type="text/css" />
@@ -72,63 +71,64 @@
             </div>
         </div>
     </div>
-
+    <a href="Default.php">Voltar</a>
     <div class="container">
         <div class="row titulo">
-            <div class="col-12 text-center">
-                <h1>Estoque de Sangue</h1>
+            <div>
+                <h1>Editar Estoque de Bolsas</h1>
             </div>
         </div>
     </div>
 
-    <div class='container'>
-        <div class="row selecao">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Animal</th>
-                        <th>Componente</th>
-                        <th>Quantidade</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
+    <?php
+        if (isset($_GET['id'])) 
+        {
+            $id = $_GET['id'];
+            include_once('C:\xampp\htdocs\integraVet\app\config.php');
 
-                        include_once('C:\xampp\htdocs\integraVet\app\config.php');
-
-                        $instituicao_cnpj = $_SESSION['id'];
-
-                        $sql = "SELECT * FROM cad_bolsa 
-                        WHERE instituicao_cnpj = '$instituicao_cnpj'";
+            $sql = "SELECT * FROM cad_bolsa 
+                    WHERE id = '$id'";
             
-                        $result = $mysql->query($sql);
+            $result = $mysql->query($sql);
+            $row = mysqli_fetch_array($result);
 
-                        while ($row = mysqli_fetch_array($result)) {
-                        ?>
-                        <tr>
-                                <td><?php echo $row["bolsa_animal"]; ?></td>
-                                <td><?php echo $row["bolsa_componente"]; ?></td>
-                                <td><?php echo $row["bolsa_quantidade"]; ?></td>
-                                
-                                <td>
-                                    <a href="edit.php?id=<?php echo $row["id"]; ?>" class="btn btn-info">Editar</a>
-                                    <a href="delete.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">Excluir</a>
-                                </td>
-                        </tr>
-                        <?php
-                        }
-                        
-                    ?>
-                </tbody>
-            </table>
+            ?>
 
-            <div class="botao col-12 text-center mt-4">
-                <a class="btn btn-primary" aria-current="page" href="CadBolsa.php">Cadastrar Bolsa</a>
-            </div>
-        </div>
-    </div>
+                <div class="container cadBolsa">
+                    <div class="row selecao">
+                        <div class="col-12 formulario">
+                            <form action="process.php" method="POST">
+                                <label for="componente">Componente</label>
+                                <select id="componente" name="componente" required>
+                                    <option value="" selected disabled>Selecione o componente</option>                        
+                                    <option value="Concentrado Hemácias" <?php if($row['bolsa_componente']=="Concentrado Hemácias"){echo "selected";} ?> >Concentrado Hemácias</option>
+                                    <option value="Plaquetas" <?php if($row['bolsa_componente']=="Plaquetas"){echo "selected";} ?> >Plaquetas</option>
+                                    <option value="Plasmas" <?php if($row['bolsa_componente']=="Plasmas"){echo "selected";} ?> >Plasmas</option>
+                                    <option value="Sangue total" <?php if($row['bolsa_componente']=="Sangue Total"){echo "selected";} ?> >Sangue Total</option>
+                                </select>
 
-    
+                                <label for="quantidade">Quantidade</label>
+                                <input type="number" id="quantidade" name="quantidade" value= <?php echo $row['bolsa_quantidade']; ?> min="1" required>
+
+                                <label for="animal">Animal</label>
+                                <select id="animal" name="animal" required>
+                                    <option value="" selected disabled>Selecione o animal</option>
+                                    <option value="Gato" <?php if($row['bolsa_animal']=="Gato"){echo "selected";} ?> >Gato</option>
+                                    <option value="Cachorro" <?php if($row['bolsa_animal']=="Cachorro"){echo "selected";} ?> >Cachorro</option>
+                                </select>
+
+                                <input type="hidden" name="id" value= <?php echo $row['id']; ?>>
+
+                                <div class="botao col-12 text-center mt-4">
+                                    <input type="submit" class="btn btn-primary" aria-current="page" name='edit' value='Salvar edição'>
+                                </div>
+                            </form>
+                        </div>
+                    </div>        
+                </div>
+                
+            <?php
+        }
+    ?>
 </body>
 </html>

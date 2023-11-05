@@ -25,6 +25,11 @@
                   '$senha_vet'
                 )"
             );
+
+            if ($result) 
+            {
+                header('Location: Login.php');
+            } 
         }
 
        
