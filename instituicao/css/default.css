@@ -1,5 +1,5 @@
 /* ----------Tabela---------- */ 
-  
+
 .CAO{
   border-right: 1px solid black;
 
@@ -63,4 +63,10 @@
 
 .bi-dash-circle-fill {
   color: red;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .CAO {
+    border-right: none;
+  }
 }

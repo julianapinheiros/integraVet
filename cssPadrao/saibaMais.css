@@ -6,6 +6,10 @@
   transition: all 0.4s ease-in-out;
 }
 
+.pets {
+  gap: 20px 0;
+}
+
 .card-body h5{
   text-align: center;
 }
@@ -16,4 +20,10 @@
 .card-img-top:hover{
   transform: scale(0.9);
 
+}
+
+@media screen and (max-width: 991px) {        
+  div.titulo h1{
+    font-size: 35px;
+  }
 }

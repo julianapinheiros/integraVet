@@ -1,18 +1,17 @@
 /* ----------Bloco de Texto---------- */
   
-  .apresentacao h1 {
+.apresentacao h1 {
     font-size: 40px;
     margin-bottom: 12px;
     color: #248EB6;
     font-weight: bold
-  }
+}
   
-  .apresentacao span {
+.apresentacao span {
     font-size: 17px;
-    text-align: left;
-  }
+}
 
-  .apresentacao h3 {
+.apresentacao h3 {
     display: block;
     font-size: 1.35em;
     margin-block-start: 1em;
@@ -20,50 +19,76 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-  }
-  
-  .apresentacao__image img {
+}
+
+.apresentacao__image img {
     object-fit: contain;
     max-width: 100%;
-  }
-    
+}
+@media screen and (max-width: 575.98px) {
+    .apresentacao__image img {
+        display: none;
+    }    
+}
+
+@media screen and (max-width: 991px) {
+    div.titulo h1{
+        font-size: 35px;
+    }    
+    div.apresentacao h1{
+      font-size: 35px;
+      text-align: center;
+    }
+    div.apresentacao h3{
+        font-size: 18px;
+        text-align: justify;
+    }
+    div.apresentacao span{
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 1998.98px) {
+    .introducao .apresentacao{
+        margin-top: -50px;
+    }
+}
 /* ----------Filtro---------- */  
 .apresentacao{
-  padding-left: 15px;
+    padding-left: 15px;
 
 }
 .filtros {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .filtro label {
-  display: block;
-  margin-bottom: 5px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .filtro select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 /* ----------Card Contatos---------- */
 
-.lista {
-  padding-left: 10px;
-  justify-content: center;
-  gap: 50px;
-}
+ .lista {
+    padding-left: 10px;
+    justify-content: center;
+    gap: 5px;
+} 
 
 .contato {
-  border-radius: 2rem;
-  width: 30% !important;
-  background-color: rgba(36, 142, 182, 0.3) !important; /* Cor azul mais transparente */
-  padding: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) ; /* Adiciona sombra */
+    border: 5px solid red;
+    border-radius: 2rem;
+    background-color: rgba(36, 142, 182, 0.3) !important; /* Cor azul mais transparente */
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) ; /* Adiciona sombra */
 }
-
