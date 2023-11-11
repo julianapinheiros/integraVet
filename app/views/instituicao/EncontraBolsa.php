@@ -50,7 +50,7 @@
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="Default.html">Meu estoque</a>
+                                        <a class="nav-link active" aria-current="page" href="Default.php">Meu estoque</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="CadBolsa.php">Cadastrar Bolsas</a>
@@ -130,59 +130,62 @@
 
                     if (isset($_GET['animal']) && $_GET['animal'] != '')
                     {
-                        var_dump("teste");
                         include_once('C:\xampp\htdocs\integraVet\app\config.php');
 
                         $animal = $_GET['animal'];
                         $componente = $_GET['componente'];
-                        $cidade = $_GET['cidade'];
+                        //$cidade = $_GET['cidade'];
 
                         $result = mysqli_query($mysql,
                         "SELECT * FROM cad_bolsa
                             WHERE bolsa_animal = '$animal' AND bolsa_componente = '$componente'
                             ORDER BY instituicao_cnpj DESC"
                         );
-                    }
+                    
 
-                    if ($result) 
-                    {
-                        if (mysqli_num_rows($result) > 0) 
+                        if ($result) 
                         {
-                ?>
+                            if ($row = mysqli_num_rows($result) > 0) 
+                            {
+                                ?>
 
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Animal</th>
-                            <th>Componente</th>
-                            <th>Quantidade</th>
-                            <th>Instituição</th>
-                            <th>Telefone</th>
-                            <th>Endereço</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                                    <?php
-                                    foreach ($result as $item)
-                                    {
-                                        ?>
-                                            <tr>
-                                                <td><?php echo $row["bolsa_animal"]; ?></td>
-                                                <td><?php echo $row["bolsa_componente"]; ?></td>
-                                                <td><?php echo $row["bolsa_quantidade"]; ?></td>
-                                            </tr>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Animal</th>
+                                            <th>Componente</th>
+                                            <th>Quantidade</th>
+                                            <th>Instituição</th>
+                                            <th>Telefone</th>
+                                            <th>Endereço</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
                                         <?php
-                                    }
-                                    ?>
-                                    <?php
-                                }
+                                            foreach ($result as $item)
+                                                {
+                                                    ?>
+                                                        <tr>
+                                                            <td><?php echo $item["bolsa_animal"]; ?></td>
+                                                            <td><?php echo $item["bolsa_componente"]; ?></td>
+                                                            <td><?php echo $item["bolsa_quantidade"]; ?></td>
+                                                        </tr>
+                                                    <?php
+                                                }
+                                        ?>
+                                        <?php
+                                        ?>
+                                    </tbody>
+                                </table>
+                                <?php
                             }
-                            
-                            
-                        ?>
-                    </tbody>
-                </table>
+                                        
+                        }
+                                    
+                                    
+                    }
+                    ?>
             </div>
         </div>
     </div>

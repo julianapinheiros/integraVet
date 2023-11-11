@@ -81,127 +81,110 @@
     </div>
     <div class="container pesquisa">
         <div class="row apresentacao">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 filtro">
-                <label for="animal">Animal:</label>
-                <select id="animal" name="animal">
-                    <option value="" selected disabled>Selecione o animal</option>
-                    <option value="gato">Cachorro</option>
-                    <option value="cachorro">Gato</option>
-                </select>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 filtro">
-                <label for="componente">Componente:</label>
-                <select id="componente" name="componente">
-                    <option value="" selected disabled>Selecione o componente</option>                    
-                    <option value="concentrado_hemacias">Concentrado Hemácias</option>
-                    <option value="plaquetas">Plaquetas</option>
-                    <option value="plasmas">Plasmas</option>
-                    <option value="sangue_total">Sangue Total</option>
-                </select>
-            </div>
-             <div class="col-xs-6 col-sm-6 col-md-2 col-lg-4 filtro">
-                <label for="componente">Cidade</label>
-                <select id="componente" name="componente">
-                    <option value="" selected disabled>Selecione a cidade</option>                    
-                    <option value="SP">São Paulo</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="ES">Vitória</option>
-                    <option value="MG">Belo Horizonte</option>         
-                </select>
-            </div>
-            <div class="botao col-12 text-center mt-4">
-                <a class="btn btn-primary" aria-current="page" href="">Buscar</a>
-            </div>
+
+            <form action=""  method="GET">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="animal">Animal:</label>
+                        <select id="animal" name="animal" class="form-select">
+                            <option value="" selected disabled>Selecione o animal</option>
+                            <option value="Gato" <?= isset($_GET['animal']) == true ? ($_GET['animal'] == 'Gato' ? 'selected': '') :''  ?> >Gato</option>
+                            <option value="Cachorro" <?= isset($_GET['animal']) == true ? ($_GET['animal'] == 'Cachorro' ? 'selected': '') :''  ?> >Cachorro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="componente">Componente:</label>
+                        <select id="componente" name="componente"  class="form-select">
+                            <option value="" selected disabled>Selecione o componente</option>                    
+                            <option value="Concentrado Hemacias"  <?= isset($_GET['componente']) == true ? ($_GET['componente'] == 'Concentrado Hemácias' ? 'selected': '') :''  ?>>Concentrado Hemácias</option>
+                            <option value="Plaquetas"  <?= isset($_GET['componente']) == true ? ($_GET['componente'] == 'Plaquetas' ? 'selected': '') :''  ?>>Plaquetas</option>
+                            <option value="Plasmas" <?= isset($_GET['componente']) == true ? ($_GET['componente'] == 'Plasmas' ? 'selected': '') :''  ?> >Plasmas</option>
+                            <option value="Sangue Total" <?= isset($_GET['componente']) == true ? ($_GET['componente'] == 'Sangue Total' ? 'selected': '') :''  ?> >Sangue Total</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="cidade">Cidade:</label>
+                        <select id="cidade" name="cidade"  class="form-select">
+                            <option value="" selected disabled>Selecione a cidade</option>                    
+                            <option value="São Paulo" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'São Paulo' ? 'selected': '') :''  ?> >São Paulo</option>
+                            <option value="Rio de Janeiro" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'Rio de Janeiro' ? 'selected': '') :''  ?> >Rio de Janeiro</option>
+                            <option value="Vitória" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'Vitória' ? 'selected': '') :''  ?> >Vitória</option>
+                            <option value="Belo Horizonte" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'Belo Horizonte' ? 'selected': '') :''  ?> >Belo Horizonte</option>         
+                        </select>
+                    </div>
+
+                    <div class="botao col-12 text-center mt-4">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+            </form>
         </div>     
     </div>
     <div class="container tabela mt-2">
         <div class="row apresentacao">
-            <div class="col-12">
-                <div class="col-12 Titulos">
-                    <div class="col-2 subTitulos">
-                        <span>Animal</span>
-                    </div>
-                    <div class="col-2 subTitulos">
-                        <span>Componente</span>
-                    </div>
-                    <div class="col-2 subTitulos">
-                        <span>Instituição</span>
-                    </div>
-                    <div class="col-2 subTitulos">
-                        <span>Telefone</span>
-                    </div>
-                    <div class="col-4 subTitulos">
-                        <span>Endereço</span>
-                    </div>
-                </div>
-                <div class="col-12 conteudo">
-                    <div class="col-2 assunto">
-                        <span>Cachorro</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>Plasma</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>SaminVet</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>11999990000</span>
-                    </div>
-                    <div class="col-4 assunto">
-                        <span>Rua xpto nº 000 Bairro:logo ali</span>
-                    </div>
-                </div>
-                <div class="col-12 conteudo">
-                    <div class="col-2 assunto">
-                        <span>Cachorro</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>Plasma</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>SaminVet</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>11999990000</span>
-                    </div>
-                    <div class="col-4 assunto">
-                        <span>Rua xpto nº 000 Bairro:logo ali</span>
-                    </div>
-                </div>
-                <div class="col-12 conteudo">
-                    <div class="col-2 assunto">
-                        <span>Cachorro</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>Plasma</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>SaminVet</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>11999990000</span>
-                    </div>
-                    <div class="col-4 assunto">
-                        <span>Rua xpto nº 000 Bairro:logo ali</span>
-                    </div>
-                </div>
-                <div class="col-12 conteudo">
-                    <div class="col-2 assunto">
-                        <span>Cachorro</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>Plasma</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>SaminVet</span>
-                    </div>
-                    <div class="col-2 assunto">
-                        <span>11999990000</span>
-                    </div>
-                    <div class="col-4 assunto">
-                        <span>Rua xpto nº 000 Bairro:logo ali</span>
-                    </div>
-                </div>
+        <div class="col-12">
+                <?php
+
+                    if (isset($_GET['animal']) && $_GET['animal'] != '')
+                    {
+                        include_once('C:\xampp\htdocs\integraVet\app\config.php');
+
+                        $animal = $_GET['animal'];
+                        $componente = $_GET['componente'];
+                        //$cidade = $_GET['cidade'];
+
+                        $result = mysqli_query($mysql,
+                        "SELECT * FROM cad_bolsa
+                            WHERE bolsa_animal = '$animal' AND bolsa_componente = '$componente'
+                            ORDER BY instituicao_cnpj DESC"
+                        );
+                    
+
+                        if ($result) 
+                        {
+                            if ($row = mysqli_num_rows($result) > 0) 
+                            {
+                                ?>
+
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Animal</th>
+                                            <th>Componente</th>
+                                            <th>Quantidade</th>
+                                            <th>Instituição</th>
+                                            <th>Telefone</th>
+                                            <th>Endereço</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <?php
+                                            foreach ($result as $item)
+                                                {
+                                                    ?>
+                                                        <tr>
+                                                            <td><?php echo $item["bolsa_animal"]; ?></td>
+                                                            <td><?php echo $item["bolsa_componente"]; ?></td>
+                                                            <td><?php echo $item["bolsa_quantidade"]; ?></td>
+                                                        </tr>
+                                                    <?php
+                                                }
+                                        ?>
+                                        <?php
+                                        ?>
+                                    </tbody>
+                                </table>
+                                <?php
+                            }
+                                        
+                        }
+                                    
+                                    
+                    }
+                    ?>
             </div>
         </div>
     </div>

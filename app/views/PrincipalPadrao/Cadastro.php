@@ -94,14 +94,16 @@
     </div>
 
     <div class="container cadastro mt-4">
-        <div class="row selecao">
-            <div class="btn-group botoes" role="group" aria-label="Default button group">
-                <button type="button" class="btn btn-outline-dark" onclick="showForm('veterinario')" id="vetBtn">Cadastrar Veterinário</button>
-                <button type="button" class="btn btn-outline-dark" onclick="showForm('clinica')" id="clinicaBtn">Cadastrar Instituição</button>
-            </div>
-        </div>
         <div class="row selecao mt-4">
-            <div id="formVeterinario" class="form-container" style="display:none;">
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-light" disabled></button>
+            <button type="button" class="btn btn-primary btn-sm" disabled>Cadastro Veterianário</button>
+            <button type="button" class="btn btn-secondary btn-sm"><a href="CadastroInstituicao.php" style="text-decoration: none; color: black;">
+            Cadastro Instituição</a></button>
+        </div><br>
+
+            <div id="formVeterinario" class="form-container">
                 <form action="Cadastro.php" method="POST">
                     <!-- Campos do formulário para cadastrar veterinário -->
                     <div class="input-field-group">
@@ -122,133 +124,13 @@
                     <div class="input-field-group">
                         <label for="senha_vet">Senha</label>
                         <input type="password" id="senha_vet" name="senha_vet" autocomplete="off" class="form-control" required>
-                    </div>                   
+                    </div> 
+
                     <div class="botao col-12 text-center mt-4">
                         <input type="submit" id="submit" name="submit" value="Cadastrar" class="btn btn-primary">
                     </div>
                 </form>
-            </div>
-    
-            <div id="formClinica" class="form-container" style="display:none;">                
-                <form id="regForm" action="Cadastro.php" method="POST">                    
-                    <!-- One "tab" for each step in the form: -->                                        
-                    <div class="tab">
-                        <div class="input-field-group">
-                            <label for="cnpj" >CNPJ</label>
-                            <input type="text" id="cnpj" name="cnpj" class="form-control" required>
-                        </div>
-                        <div class="input-field-group">
-                            <label for="nome_clinica" >Nome</label>
-                            <input type="text" id="nome_clinica" class="form-control" name="nome_clinica" required>
-                        </div>
-                        <div class="input-field-group">
-                            <label for="email" >Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="input-field-group">
-                            <label for="senha" >Senha</label>
-                            <input type="password" id="senha" name="senha" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="tab">
-                        <div class="formulario">
-                            <div class="row">
-                                <div class="col-3 col-md-3">
-                                    <div class="input-field-group">
-                                        <label for="cep" >CEP</label>
-                                        <input type="text" id="cep" name="cep" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-7 col-md-7">
-                                    <div class="input-field-group">
-                                        <label for="logradouro" >Endereço</label>
-                                        <input type="text" id="logradouro" name="logradouro" class="form-control" required>
-                                    </div>  
-                                </div>
-                                <div class="col-2 col-md-2">
-                                    <div class="input-field-group">
-                                        <label for="numero" >Número</label>
-                                        <input type="text" id="numero" name="numero" class="form-control" required>
-                                    </div>                                    
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-4 col-md-4">
-                                    <div class="input-field-group">
-                                        <label for="bairro" >Bairro</label>
-                                        <input type="text" id="bairro" name="bairro" class="form-control" required>
-                                    </div>                                                                       
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <div class="input-field-group">
-                                        <label for="localidade" >Cidade</label>
-                                        <input type="text" id="localidade" name="localidade" class="form-control" required>
-                                    </div>                                                                       
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <div class="input-field-group">
-                                        <label for="uf" >Estado</label>
-                                        <input type="text" id="uf" name="uf" class="form-control" required>
-                                    </div>                                                                       
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-4 col-md-4">
-                                    <div class="input-field-group">
-                                        <label for="tel" >Telefone</label>
-                                        <input type="text" id="tel" name="tel" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-8 col-md-8">
-                                    <label for="trabalho">Trabalhamos com:</label>
-                                    <div class="col-12 col-md-12 checklist">
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label" for="Banco">Banco de Sangue</label>
-                                            <input class="form-check-input" type="checkbox" id="Banco" value="Banco">
-                                        </div>
-                                        
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label" for="Coleta">Coleta</label> 
-                                            <input class="form-check-input" type="checkbox" id="Coleta" value="Coleta">                                            
-                                        </div>
-                                        
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label" for="Estoque">Estoque de Bolsa</label>
-                                            <input class="form-check-input" type="checkbox" id="Estoque" value="Estoque">                                            
-                                        </div>
-                                        
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label" for="Transfusao">Transfusão</label>
-                                            <input class="form-check-input" type="checkbox" id="Transfusao" value="Transfusao">                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <span id="mensagem-erro" style="color: red; display: none;">CEP não encontrado</span>                            
-                        </div>                   
-                    </div>
-                                                            
-                    <div class="buttons" style="overflow:auto;">
-                        <div class="botao mt-4" style="float:right;">
-                            <a class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Avançar</a>
-                        </div>
-
-                        <div class="botao mt-4" style="float:left;">
-                            <a class="btn btn-outline-secondary" id="prevBtn" onclick="nextPrev(-1)">Voltar</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Circles which indicates the steps of the form: -->
-                    <div style="text-align:center;margin-top:40px;">
-                        <span class="step"></span>
-                        <span class="step"></span>
-                    </div>                    
-                </form>
-            </div>           
+            </div>         
         </div>       
     </div>
 </body>
