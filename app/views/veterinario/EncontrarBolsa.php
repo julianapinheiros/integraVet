@@ -108,8 +108,8 @@
                         <label for="cidade">Cidade:</label>
                         <select id="cidade" name="cidade"  class="form-select">
                             <option value="" selected disabled>Selecione a cidade</option>                    
-                            <option value="São Paulo" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'São Paulo' ? 'selected': '') :''  ?> >São Paulo</option>
-                            <option value="Rio de Janeiro" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'Rio de Janeiro' ? 'selected': '') :''  ?> >Rio de Janeiro</option>
+                            <option value="SP" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'SP' ? 'selected': '') :''  ?> >São Paulo</option>
+                            <option value="RJ" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'RJ' ? 'selected': '') :''  ?> >Rio de Janeiro</option>
                             <option value="Vitória" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'Vitória' ? 'selected': '') :''  ?> >Vitória</option>
                             <option value="Belo Horizonte" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'Belo Horizonte' ? 'selected': '') :''  ?> >Belo Horizonte</option>         
                         </select>
@@ -136,9 +136,21 @@
                         //$cidade = $_GET['cidade'];
 
                         $result = mysqli_query($mysql,
-                        "SELECT * FROM cad_bolsa
-                            WHERE bolsa_animal = '$animal' AND bolsa_componente = '$componente'
-                            ORDER BY instituicao_cnpj DESC"
+                        "SELECT 
+                            cb.bolsa_animal,
+                            cb.bolsa_componente,
+                            cb.bolsa_quantidade,
+                            ic.instituicao_nome,
+                            ic.uf,
+                            ic.telefone
+                         FROM 
+                            cad_bolsa AS cb
+                         JOIN 
+                            instituicao_cadastro AS ic ON cb.instituicao_cnpj = ic.instituicao_cnpj
+                         WHERE 
+                            cb.bolsa_animal = '$animal' AND cb.bolsa_componente = '$componente' AND ic.uf = '$cidade'
+                         ORDER BY 
+                            ic.instituicao_cnpj DESC;"
                         );
                     
 
@@ -155,8 +167,8 @@
                                             <th>Componente</th>
                                             <th>Quantidade</th>
                                             <th>Instituição</th>
+                                            <th>Estado</th>
                                             <th>Telefone</th>
-                                            <th>Endereço</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -169,6 +181,9 @@
                                                             <td><?php echo $item["bolsa_animal"]; ?></td>
                                                             <td><?php echo $item["bolsa_componente"]; ?></td>
                                                             <td><?php echo $item["bolsa_quantidade"]; ?></td>
+                                                            <td><?php echo $item["instituicao_nome"]; ?></td>
+                                                            <td><?php echo $item["uf"]; ?></td>
+                                                            <td><?php echo $item["telefone"]; ?></td>
                                                         </tr>
                                                     <?php
                                                 }

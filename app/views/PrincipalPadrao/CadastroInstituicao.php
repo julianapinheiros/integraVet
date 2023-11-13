@@ -52,9 +52,7 @@
 
             if ($result) 
             {
-
-                //header('Location: Login.php');
-                //echo  "<script>alert('Email enviado com Sucesso!');</script>";
+                header('Location: Login.php');
             } 
         }
 
