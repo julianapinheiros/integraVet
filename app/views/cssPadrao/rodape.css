@@ -1,0 +1,14 @@
+footer {
+    margin-top: 30px;
+    height: 100px;
+    padding: 0 40px;
+}
+
+footer .dados {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.suporte svg {
+    margin-right: 5px;
+}

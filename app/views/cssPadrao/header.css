@@ -49,3 +49,12 @@
 .navbar-brand img {
   height: 100px;
 }
+@media screen and (max-width: 991.98px) {
+  .navbar-brand img {
+    margin-top: -53px;
+  }
+
+  .navbar-toggler {
+    margin-top: -53px !important;
+  }
+}

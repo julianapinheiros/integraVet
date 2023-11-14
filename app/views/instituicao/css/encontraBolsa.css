@@ -130,20 +130,26 @@ body, html {
   font-style: italic;
   text-align: center;
   border-right: 1px solid black;
-  justify-content: center;
-  padding: 20px 0;
+  padding: 20px;
 
 
 }
-/* .Titulos .subTitulos span {
-  border: 5px solid red;
-} */
 
-/* .conteudo {
-  border: 5px solid black;
-} */
 .assunto {
   border-right: 1px solid black;
   padding: 20px;
 
+}
+
+@media screen and (max-width: 992px) {
+  .tabela .apresentacao {
+    overflow-x: scroll;
+  }
+
+  .table-content {
+    min-width: 1000px;
+  }
+  .assunto:last-child, .subTitulos:last-child {
+    border-right: 0;
+  }
 }

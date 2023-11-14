@@ -1,0 +1,111 @@
+/* ----------Bloco de Texto---------- */
+    .apresentacao h1 {
+        font-size: 58px;
+        margin-bottom: 12px;
+        color: #248EB6;
+    }
+    
+    .apresentacao span {
+        font-size: 17px;
+        text-align: left;
+    }
+    
+    .apresentacao h3 {
+        display: block;
+        font-size: 1.35em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+    
+    .apresentacao__image img {
+        object-fit: contain;
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        .imagem img {
+            display: none;
+        }        
+        .botao, .titulo {
+            text-align: center;
+        }
+        .texto {
+            text-align: justify;
+            padding: 0 10px;
+        }
+    }
+    @media screen and (max-width: 1998.98px) {
+        .introducao .apresentacao{
+            margin-top: -50px;
+        }
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+        .apresentacao__image img {
+            height: 450px;
+        }
+    }
+
+    /* ----------Campanha---------- */
+  
+    .title_campanhas {
+        text-align: center;
+    }
+    
+    .campanhas .campanha-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .campanhas .campanha-card .campanha-card__img {
+        width: 326px;
+        height: 326px;
+    }
+    
+    .campanha-card__img img {
+        object-fit: cover;
+        min-width: 100%;
+        max-width: 100%;
+        height: 100%;
+        border-radius: 100%;
+    }
+    
+    .campanha-card__action {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .campanha-card__content h3 {
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .campanha-card__content p {
+        font-size: 17px;
+        text-align: center;
+    }
+    
+    @media screen and (max-width: 767.98px) {
+        .carousel-dark .carousel-indicators {
+            bottom: -50px;
+        }
+        .campanhas {
+            margin-top: -40px;
+        }    
+        .campanha-card__img img {
+            margin-top: 20px;
+        }
+        .campanha-card__content p{
+            margin-top: -10px;
+        }
+        .botao .btn.btn-primary {
+            margin-top: -20px;
+        }
+        
+    }  
