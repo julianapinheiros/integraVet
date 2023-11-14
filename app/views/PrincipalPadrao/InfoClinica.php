@@ -1,3 +1,10 @@
+<?php
+    if (isset($_POST['submit']))
+    {
+       
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -63,36 +70,8 @@
             </div>
         </div>
         <div class="row selecao mt-4">
-            <div id="formVeterinario" class="form-container" style="display:none;">
-                <form action="/cadastrar_veterinario" method="post">
-                    <!-- Campos do formulário para cadastrar veterinário -->
-                    <div class="input-field-group">
-                        <label for="CRMV">CRMV</label>
-                        <input type="text" id="CRMV" name="CRMV" class="form-control" required>
-                    </div>
-                    
-                    <div class="input-field-group">
-                        <label for="nome_vet">Nome</label>
-                        <input type="text" id="nome_vet" name="nome_vet" class="form-control" required>
-                    </div>
-
-                    <div class="input-field-group">
-                        <label for="email_vet">Email</label>
-                        <input type="email" id="email_vet" name="email_vet" class="form-control" required>
-                    </div>
-
-                    <div class="input-field-group">
-                        <label for="senha_vet">Senha</label>
-                        <input type="password" id="senha_vet" name="senha_vet" class="form-control" required>
-                    </div>                   
-                    <div class="botao col-12 text-center mt-4">
-                        <a class="btn btn-primary" aria-current="page" href="">Cadastrar Veterinário</a>
-                    </div>
-                </form>
-            </div>
-    
             <div id="formClinica" class="form-container" style="display:none;">                
-                <form id="regForm" action="/cadastrar_clinica" method="post">                    
+                <form id="regForm" action="Cadastro.php" method="POST">                    
                     <!-- One "tab" for each step in the form: -->                                        
                     <div class="tab">
                         <div class="input-field-group">

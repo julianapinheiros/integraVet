@@ -43,7 +43,7 @@
                                 </ul>
                                 <ul class="navbar-nav login" aling="text-rigt">
                                     <li class="nav-item">
-                                        <a class="nav-link active login" aria-current="page" href="../PrincipalPadrao/Login.html">Login</a>
+                                        <a class="nav-link active login" aria-current="page" href="../PrincipalPadrao/Login.php">Login</a>
                                     </li>
                                 </ul>
                             </div>
@@ -73,7 +73,7 @@
                         Clique em "Acessar" e cadastre-se para acessar nossos recursos.</span>
                 </div>
                 <div class="col-12 mt-3">
-                    <a href="../PrincipalPadrao/Cadastro.html" class="button__apresentacao">Acessar</a>
+                    <a href="../PrincipalPadrao/Cadastro.php" class="button__apresentacao">Acessar</a>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -93,111 +93,116 @@
     </div>
 
     <div class="container">
-        <div class="row apresentacao">            
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 filtro">
-                <label for="animal">Procedimento</label>
-                <select id="animal" name="animal">
-                    <option value="" selected disabled>Selecione o tipo</option>
-                    <option value="gato">Banco de Sangue</option>
-                    <option value="cachorro">Coleta de Sangue</option>
-                    <option value="cachorro">Estoque de Bolsa</option>
-                    <option value="cachorro">Transfusão</option>
-                </select>                
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 filtro">
-                <label for="componente">Componente</label>
-                <select id="componente" name="componente">
-                    <option value="" selected disabled>Selecione o componente</option>                    
-                    <option value="concentrado_hemacias">Concentrado Hemácias</option>
-                    <option value="plaquetas">Plaquetas</option>
-                    <option value="plasmas">Plasmas</option>
-                    <option value="sangue_total">Sangue Total</option>
-                </select>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 filtro">
-                <label for="componente">Estado  </label>
-                <select id="componente" name="componente">
-                    <option value="" selected disabled>Selecione o estado</option>                    
-                    <option value="SP">São Paulo</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="ES">Espirito Santo</option>
-                    <option value="MG">Minas Gerais</option>         
-                </select>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 filtro">
-                <label for="componente">Cidade</label>
-                <select id="componente" name="componente">
-                    <option value="" selected disabled>Selecione a cidade</option>                    
-                    <option value="SP">São Paulo</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="ES">Vitória</option>
-                    <option value="MG">Belo Horizonte</option>         
-                </select>
-            </div>
+        <div class="row apresentacao">     
+            <form action=""  method="GET">  
+                <div class="row">     
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 filtro">
+                        <label for="Procedimento">Procedimento</label>
+                        <select id="Procedimento" name="Procedimento">
+                            <option value="" selected disabled>Selecione o procedimento</option>
+                            <option value="Banco de sangue" <?= isset($_GET['Procedimento']) == true ? ($_GET['Procedimento'] == 'Banco de sangue' ? 'selected': '') :''  ?>>Banco de Sangue</option>
+                            <option value="Coleta" <?= isset($_GET['Procedimento']) == true ? ($_GET['Procedimento'] == 'Coleta' ? 'selected': '') :''  ?>>Coleta de Sangue</option>
+                            <option value="Estoque de Bolsas" <?= isset($_GET['Procedimento']) == true ? ($_GET['Procedimento'] == 'Estoque de Bolsas' ? 'selected': '') :''  ?>>Estoque de Bolsa</option>
+                            <option value="Transfusão" <?= isset($_GET['Procedimento']) == true ? ($_GET['Procedimento'] == 'Transfusão' ? 'selected': '') :''  ?>>Transfusão</option>
+                        </select>                
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 filtro">
+                        <label for="uf">Estado  </label>
+                        <select id="uf" name="uf">
+                            <option value="" selected disabled>Selecione o estado</option>                    
+                            <option value="SP" <?= isset($_GET['uf']) == true ? ($_GET['uf'] == 'SP' ? 'selected': '') :''  ?>>São Paulo</option>
+                            <option value="RJ" <?= isset($_GET['uf']) == true ? ($_GET['uf'] == 'RJ' ? 'selected': '') :''  ?>>Rio de Janeiro</option>
+                            <option value="ES" <?= isset($_GET['uf']) == true ? ($_GET['uf'] == 'ES' ? 'selected': '') :''  ?>>Espirito Santo</option>
+                            <option value="MG" <?= isset($_GET['uf']) == true ? ($_GET['uf'] == 'MG' ? 'selected': '') :''  ?>>Minas Gerais</option>         
+                        </select>
+                    </div>
+                </div>
 
-            <div class="botao col-12 text-center mt-4">
-                <a class="btn btn-primary" aria-current="page" href="">Buscar</a>
-            </div>            
+                <div class="botao col-12 text-center mt-4">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                </div>
+            </div>   
+            </form>          
         </div>        
     </div>
-    <div class="container mt-3">
-        <div class="row lista text-center">            
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 contato">
-                <div class="card-body">
-                  <h5 class="card-title">Clínica XPTO</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Banco de Sangue</h6>
-                  <p class="card-text">Telefone: 11 9 9999-9999</p>
-                  <p class="card-text">WhatsApp: 11999605159</p>
-                  <span class="card-text">Endereço: Rua Maria Costa Nº 200 Bairro: Logo ali</span>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 contato meio">
-                <div class="card-body">
-                  <h5 class="card-title">Clínica XPTO</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Coleta de Sangue</h6>
-                  <p class="card-text">Telefone: 11 9 9999-9999</p>
-                  <p class="card-text">WhatsApp: 11999605159</p>
-                  <span class="card-text">Endereço: Rua Maria Costa Nº 200 Bairro: Logo ali</span>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 contato">
-                <div class="card-body">
-                  <h5 class="card-title">Clínica XPTO</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Transfusão</h6>
-                  <p class="card-text">Telefone: 11 9 9999-9999</p>
-                  <p class="card-text">WhatsApp: 11999605159</p>
-                  <span class="card-text">Endereço: Rua Maria Costa Nº 200 Bairro: Logo ali</span>
-                </div>
-            </div>
-                   
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 contato">
-                <div class="card-body">
-                  <h5 class="card-title">Clínica XPTO</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Banco de Sangue</h6>
-                  <p class="card-text">Telefone: 11 9 9999-9999</p>
-                  <p class="card-text">WhatsApp: 11999605159</p>
-                  <span class="card-text">Endereço: Rua Maria Costa Nº 200 Bairro: Logo ali</span>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 contato">
-                <div class="card-body">
-                  <h5 class="card-title">Clínica XPTO</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Coleta de Sangue</h6>
-                  <p class="card-text">Telefone: 11 9 9999-9999</p>
-                  <p class="card-text">WhatsApp: 11999605159</p>
-                  <span class="card-text">Endereço: Rua Maria Costa Nº 200 Bairro: Logo ali</span>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 contato">
-                <div class="card-body">
-                  <h5 class="card-title">Clínica XPTO</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Transfusão</h6>
-                  <p class="card-text">Telefone: 11 9 9999-9999</p>
-                  <p class="card-text">WhatsApp: 11999605159</p>
-                  <span class="card-text">Endereço: Rua Maria Costa Nº 200 Bairro: Logo ali</span>
-                </div>
+
+    <div class="container tabela mt-2">
+        <div class="row apresentacao">
+            <div class="col-12">
+                <?php
+
+                    if (isset($_GET['uf']) && $_GET['Procedimento'] != '')
+                    {
+                        include_once('C:\xampp\htdocs\integraVet\app\config.php');
+
+                        $uf = $_GET['uf'];
+                        $procedimento = $_GET['Procedimento'];
+                        
+                        $result = mysqli_query($mysql,
+                        "SELECT 
+                            ic.instituicao_nome,
+                            ic.trabalhamos_com,
+                            ic.telefone,
+                            ic.logradouro,
+                            ic.numero,
+                            ic.bairro
+                        FROM 
+                            instituicao_cadastro AS ic
+                        WHERE 
+                            ic.trabalhamos_com = '$procedimento' AND ic.uf = '$uf'
+                        ORDER BY 
+                            ic.instituicao_cnpj DESC;"
+                        );
+                            
+
+                        if ($result) 
+                        {
+                            if ($row = mysqli_num_rows($result) > 0) 
+                            {
+                                ?>
+
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Instituição</th>
+                                                <th>Procedimento</th>
+                                                <th>Telefone</th>
+                                                <th>Endereço</th>
+                                                <th>Numero</th>
+                                                <th>Bairro</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                    
+                                <?php
+                                    foreach ($result as $item)
+                                    {
+                                ?>
+                                    <tr>
+                                        <td><?php echo $item["instituicao_nome"]; ?></td>
+                                        <td><?php echo $item["trabalhamos_com"]; ?></td>
+                                        <td><?php echo $item["telefone"]; ?></td>
+                                        <td><?php echo $item["logradouro"]; ?></td>
+                                        <td><?php echo $item["numero"]; ?></td>
+                                        <td><?php echo $item["bairro"]; ?></td>
+                                    </tr>
+                                <?php
+                                    }
+                                ?>
+                                <?php
+                                ?>
+                                        </tbody>
+                                    </table>
+                                <?php
+                                    }
+                                                
+                            }
+                        }
+                ?>
             </div>
         </div>
+    </div>
+
     </div>
     <div class="bg-light">       
         <footer>

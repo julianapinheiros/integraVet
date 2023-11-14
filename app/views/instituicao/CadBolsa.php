@@ -1,3 +1,18 @@
+<?php
+    session_start();
+    
+    if ((!isset($_SESSION['id']) == true) &&
+        (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['id']);
+        unset($_SESSION['senha']);
+
+        header('Location: ../tutores/Default.html');
+    }
+
+    $logado = $_SESSION['id'];
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -29,25 +44,25 @@
                 <div class="col-12 mn">
                     <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="../instituicao/Default.html"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
+                            <a class="navbar-brand" href="../instituicao/Default.php"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="Default.html">Meu Estoque</a>
+                                        <a class="nav-link active" aria-current="page" href="Default.php">Meu Estoque</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="CadBolsa.html">Cadastrar Bolsas</a>
+                                        <a class="nav-link" href="CadBolsa.php">Cadastrar Bolsas</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="EncontraBolsa.html">Encontrar Bolsas</a>
+                                        <a class="nav-link" href="EncontraBolsa.php">Encontrar Bolsas</a>
                                     </li>
                                 </ul>
                                 <ul class="navbar-nav sair" aling="text-rigt">
                                     <li class="nav-item">
-                                        <a class="nav-link active sair" aria-current="page" href="../tutores/Default.html">Sair</a>
+                                        <a class="nav-link active sair" aria-current="page" href="../veterinario/logout.php">Sair</a>
                                     </li>
                                 </ul>
                             </div>
@@ -69,14 +84,14 @@
     <div class="container cadBolsa">
         <div class="row selecao">
             <div class="col-12 formulario">
-                <form action="/cadastro" method="post">
+                <form action="process.php" method="POST">
                     <label for="componente">Componente</label>
                     <select id="componente" name="componente" required>
                         <option value="" selected disabled>Selecione o componente</option>                        
-                        <option value="concentrado_hemacias">Concentrado Hemácias</option>
-                        <option value="plaquetas">Plaquetas</option>
-                        <option value="plasmas">Plasmas</option>
-                        <option value="sangue_total">Sangue Total</option>
+                        <option value="Concentrado Hemácias">Concentrado Hemácias</option>
+                        <option value="Plaquetas">Plaquetas</option>
+                        <option value="Plasmas">Plasmas</option>
+                        <option value="Sangue total">Sangue Total</option>
                     </select>
 
                     <label for="quantidade">Quantidade</label>
@@ -85,12 +100,12 @@
                     <label for="animal">Animal</label>
                     <select id="animal" name="animal" required>
                         <option value="" selected disabled>Selecione o animal</option>
-                        <option value="gato">Cachorro</option>
-                        <option value="cachorro">Gato</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Cachorro">Cachorro</option>
                     </select>
 
                     <div class="botao col-12 text-center mt-4">
-                        <a class="btn btn-primary" aria-current="page" href="CadBolsa.html">Cadastre</a>
+                        <input type="submit" class="btn btn-primary" aria-current="page" name='submit' value='Cadastre'>
                     </div>
                 </form>
             </div>
