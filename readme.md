@@ -1,5 +1,6 @@
 
-# IntegraVet
+![Logo](https://github.com/julianapinheiros/integraVet/blob/main/app/views/imagens/IntegraVET.png)
+# IntegraVet 
 
 Uma breve descrição sobre o que esse projeto faz e para quem ele é
 
@@ -65,12 +66,3 @@ A aplicação estará disponível localmente.
 ```bash
   http://localhost/integraVet/app/views/tutores/Default.html
 ```
-
-
-
-
-## Funcionalidades já implementadas
-
-- Login para CNPJ e CRMV
-- Logout para CNPJ e CRMV
-- Cadastro apenas para CRMV
