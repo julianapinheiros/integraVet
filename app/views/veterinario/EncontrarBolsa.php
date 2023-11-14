@@ -133,7 +133,7 @@
 
                         $animal = $_GET['animal'];
                         $componente = $_GET['componente'];
-                        //$cidade = $_GET['cidade'];
+                        $cidade = $_GET['cidade'];
 
                         $result = mysqli_query($mysql,
                         "SELECT 

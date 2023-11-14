@@ -208,10 +208,10 @@
                     <div class="input-field-group">
                         <label for="trabalhamos_com">Trabalhamos com:</label>
                         <select name="trabalhamos_com">
-                            <option value="banco_sangue">Banco de Sangue</option>
-                            <option value="coleta">Coleta</option>
-                            <option value="estoque_bolsa">Estoque de Bolsa</option>
-                            <option value="transfusao">Transfusão</option>
+                            <option value="Banco de sangue">Banco de Sangue</option>
+                            <option value="Coleta">Coleta</option>
+                            <option value="Estoque de Bolsas">Estoque de Bolsa</option>
+                            <option value="Transfusão">Transfusão</option>
                         </select><br>
                     </div> 
 
