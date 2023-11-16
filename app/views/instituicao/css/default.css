@@ -1,0 +1,72 @@
+/* ----------Tabela---------- */ 
+
+.CAO{
+  border-right: 1px solid black;
+
+}
+.CAO h2, .GATO h2 {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-size: 40px;
+  margin-bottom: 12px;
+  color: #248EB6;
+  font-weight: bold;
+}
+.subTitulos, .conteudo {
+  display: inline-flex;
+  text-align: center;
+  padding: 15px;
+}
+
+.subTitulos {  
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #248EB6;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.row-line input {
+  width: 60px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+.row-line input::-webkit-outer-spin-button,
+.row-line input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.row-line .btn-qty-manipulation {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.btn.btn-primary {
+  color: #fff !important;
+  background-color: #248EB6;
+  border-radius: 30px;
+  padding: 8px 30px !important;
+
+} 
+
+/* Ícone */
+
+.bi-plus-circle-fill {
+  color: green;
+}
+
+.bi-dash-circle-fill {
+  color: red;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .CAO {
+    border-right: none;
+  }
+}

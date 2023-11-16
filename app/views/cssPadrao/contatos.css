@@ -1,0 +1,86 @@
+/* ----------Bloco de Texto---------- */
+.apresentacao h1 {
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: #248EB6;
+    font-weight: bold;
+     
+}
+  
+.apresentacao span {
+    font-size: 17px;
+}
+
+.apresentacao h3 {
+    display: block;
+    font-size: 1.35em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.apresentacao__image img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 575.98px) {
+    .apresentacao__image img {
+        display: none;
+    }    
+}
+
+@media screen and (max-width: 991px) {
+    div.titulo h1{
+        font-size: 35px;
+    }    
+    div.apresentacao h1{
+      font-size: 35px;
+      text-align: center;
+    }
+    div.apresentacao h3{
+        font-size: 18px;
+        text-align: justify;
+    }
+    div.apresentacao span{
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 1998.98px) {
+    .introducao .apresentacao{
+        margin-top: -50px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .apresentacao__image img {
+        height: 500px;
+    }
+}
+/* ----------Filtro---------- */  
+.apresentacao{
+    padding-left: 15px;
+
+}
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filtro label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filtro select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+

@@ -1,0 +1,122 @@
+/* ----- ----- ----- ----- ----- ----- ----- Terço da Tela ----- ----- ----- ----- ----- ----- ----- */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.terco-da-tela {
+  width: 33.33%; /* Define a largura para 33.33% da largura da tela */
+  background-color: #248EB6; /* Cor de fundo para o terço da tela */
+  height: 100%; /* Ocupa toda a altura da tela */
+  float: left; /* Faz com que a div fique à esquerda para ocupar o espaço horizontalmente */
+}
+
+.img-fluid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 34%;
+  height: 100px; /* Altura do rodapé */
+}
+
+@media screen and (max-width: 991.98px) {
+  .terco-da-tela {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .terco-da-tela {
+    height: 100%;
+  }
+}
+/* ----- ----- ----- ----- ----- ----- ----- Padrão Títulos e Subtítulos ----- ----- ----- ----- ----- ----- ----- */
+.titulo h1{
+  font-size: 45px;
+  color: #248EB6;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* ----- ----- ----- ----- ----- ----- ----- Padrão Botões ----- ----- ----- ----- ----- ----- ----- */
+/* ---------- Botão Sair ---------- */
+.navbar-nav .sair {
+    color: #fff !important;
+    background-color: #ad0000;
+    border-radius: 30px;
+    padding: 8px 30px !important;
+  }
+
+/* ---------- Botões Azuis ---------- */
+.btn.btn-primary {
+  color: #fff !important;
+  background-color: #248EB6;
+  border-radius: 30px;
+  padding: 8px 30px !important;
+
+}
+
+/* ---------- Botão Avançar ---------- */
+
+.btn.btn-info{
+  border-radius: 30px;
+  padding: 8px 30px !important;
+}
+
+/* ---------- Botão Voltar ---------- */
+.btn.btn-outline-secondary{
+  border-radius: 30px;
+  padding: 8px 30px !important;
+}
+
+/* ---------- Botão Acessar ---------- */
+
+.button__apresentacao {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.button__apresentacao:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #248EB6;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.button__apresentacao:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #D3ECF5;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.button__apresentacao:hover {
+  color: black;
+}
+
+.button__apresentacao:hover:before {
+  width: 100%;
+}
