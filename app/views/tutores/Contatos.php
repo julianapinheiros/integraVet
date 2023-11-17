@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>IntegraVet - Contatos</title>
-    <link href="css/contatos.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/contatos.css" rel="stylesheet" type="text/css" /> -->
     <link href="../cssPadrao/header.css" rel="stylesheet" type="text/css" />
+    <link href="../cssPadrao/contatos.css" rel="stylesheet" type="text/css" />
     <link href="../cssPadrao/geral.css" rel="stylesheet" type="text/css" />
-    <link href="../cssPadrao/rodape.css" rel="stylesheet" type="text/css" /> 
+    <link href="../cssPadrao/rodape.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -19,46 +20,19 @@
 
 </head>
 <body>
-    <div class="bg-light">
-        <div class="container menu">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="navbar navbar-expand-lg bg-light">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="../tutores/Default.html"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="Default.html">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="Contatos.html">Contatos</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="SaibaMais.html">Saiba Mais</a>
-                                    </li>
-                                </ul>
-                                <ul class="navbar-nav login" aling="text-rigt">
-                                    <li class="nav-item">
-                                        <a class="nav-link active login" aria-current="page" href="../PrincipalPadrao/Login.php">Login</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-    
-                </div>
-            </div>
-        </div>
+    <!-- Menu -->
+    <div class="topnav" id="myTopnav">
+        <a href="../tutores/Default.html" class="active">Home</a>
+        <a href="../tutores/Contatos.php">Contatos</a>
+        <a href="../tutores/SaibaMais.html">Saiba Mais</a>
+        <a href="../PrincipalPadrao/Login.php">Login</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </div>
 
     <div class="container introducao mt-5">
         <div class="row apresentacao">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="col-12 mb-3">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="col-12 mb-3 mt-4">
                     <h1>Seja um Hemocentro Cadastrado!</h1>
                 </div>
                 <div class="col-12 mb-4">
@@ -70,13 +44,13 @@
                 </div>
                 <div class="col-12 mt-4">
                     <span>Possui estoque de bolsas de sangue? Atua na área de transfusão de sangue animal?<br>
-                        Clique em "Acessar" e cadastre-se para acessar nossos recursos.</span>
+                    Clique em "Acessar" e cadastre-se para acessar nossos recursos.</span>
                 </div>
                 <div class="col-12 mt-3">
                     <a href="../PrincipalPadrao/Cadastro.php" class="button__apresentacao">Acessar</a>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 mt-2">
                 <div class="apresentacao__image">
                     <img src="../imagens/imagem_apresentacao1.png" />
                 </div>
@@ -96,7 +70,7 @@
         <div class="row apresentacao">     
             <form action=""  method="GET">  
                 <div class="row">     
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 filtro">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 filtro">
                         <label for="Procedimento">Procedimento</label>
                         <select id="Procedimento" name="Procedimento">
                             <option value="" selected disabled>Selecione o procedimento</option>
@@ -106,7 +80,7 @@
                             <option value="Transfusão" <?= isset($_GET['Procedimento']) == true ? ($_GET['Procedimento'] == 'Transfusão' ? 'selected': '') :''  ?>>Transfusão</option>
                         </select>                
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 filtro">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 filtro">
                         <label for="uf">Estado  </label>
                         <select id="uf" name="uf">
                             <option value="" selected disabled>Selecione o estado</option>                    

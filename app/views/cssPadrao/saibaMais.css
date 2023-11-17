@@ -27,3 +27,16 @@
     font-size: 35px;
   }
 }
+
+@media screen and (min-width: 992px) and (max-width: 1199.99px){        
+  .card .card-body{
+    height: 570px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){        
+  .card .card-body{
+    height: 480px;
+  }
+}
+

@@ -41,14 +41,14 @@
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="../veterinario/Default.html"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
+                            <a class="navbar-brand" href="../veterinario/Default.php"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="Default.html">Home</a>
+                                        <a class="nav-link active" aria-current="page" href="Default.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="SaibaMais.html">Saiba Mais</a>
@@ -145,7 +145,7 @@
   
     <div class="container">
         <div class="row campanhas">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 campanha-card">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mt-2 campanha-card">
                 <figure class="campanha-card__img">
                     <img src="../imagens/campanha01.jpeg" />
                 </figure>
@@ -160,7 +160,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 campanha-card">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mt-2 campanha-card">
                 <figure class="campanha-card__img">
                     <img src="../imagens/campanha02.jpeg" />
                 </figure>
@@ -175,7 +175,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 campanha-card">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mt-2 campanha-card">
                 <figure class="campanha-card__img">
                     <img src="../imagens/campanha03.jpg" />
                 </figure>
