@@ -50,7 +50,7 @@
                     <a href="../PrincipalPadrao/Cadastro.php" class="button__apresentacao">Acessar</a>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 mt-2">
                 <div class="apresentacao__image">
                     <img src="../imagens/imagem_apresentacao1.png" />
                 </div>

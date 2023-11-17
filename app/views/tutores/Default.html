@@ -22,14 +22,49 @@
 
   
 <body>
-    <!-- Menu -->
+    <!-- <div class="bg-light">
+        <div class="container menu">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="../tutores/Default.html"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="../tutores/Default.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../tutores/Contatos.php">Contatos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../tutores/SaibaMais.html">Saiba Mais</a>
+                                    </li>
+                                </ul>
+                                <ul class="navbar-nav login" aling="text-rigt">
+                                    <li class="nav-item">
+                                        <a class="nav-link active login" aria-current="page" href="../PrincipalPadrao/Login.php">Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Início Teste -->
     <div class="topnav" id="myTopnav">
         <a href="../tutores/Default.html" class="active">Home</a>
         <a href="../tutores/Contatos.php">Contatos</a>
         <a href="../tutores/SaibaMais.html">Saiba Mais</a>
-        <a href="../PrincipalPadrao/Login.php">Login</a>
+        <a href="../PrincipalPadrao/Login.php" id="login">Login</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </div>
+    <!-- Fim Teste -->
     <div class="container introducao mt-5">
         <div class="row apresentacao">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
@@ -51,7 +86,7 @@
                     <a href="../PrincipalPadrao/Cadastro.php" class="button__apresentacao">Acessar</a>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 mt-2">
                 <div class="apresentacao__image">
                     <img src="../imagens/imagem_apresentacao1.png" />
                 </div>
@@ -156,7 +191,7 @@
         <footer>
             <div class="row dados">
                 <div class="info">
-                    <span><a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Política de Privacidade</a> | <a href="">Termos e condições de uso</a></span>
+                    <span><a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Política de Privacidade</a> | <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Termos e condições de uso</a></span>
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                         <div class="modal-content">
@@ -203,6 +238,50 @@
                         </div>
                         </div>
                     </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Termos e condições de uso</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Data de vigência: [xx/xx/xxxx]</h4>
+                                <p>Bem-vindo à SIS IntegraVET. Antes de utilizar nossos serviços, por favor, leia atentamente os Termos e Condições de Uso abaixo. 
+                                    Ao acessar ou utilizar nossa plataforma, você concorda com estes termos.
+                                </p>
+                                <h5>1. Aceitação dos Termos e Condições</h5>
+                                <p>Ao acessar ou utilizar a SIS IntegraVET, você concorda e aceita estes Termos e Condições de Uso. 
+                                    Se não concordar com qualquer parte destes termos, solicitamos que não utilize nossos serviços.
+                                </p>
+                                <h5>2. Cadastro na Plataforma</h5>                                   
+                                <p>-Veterinários: Ao se cadastrar, você concorda em fornecer informações precisas, incluindo seu nome, CRMV, endereço de e-mail e outras informações necessárias. Você é responsável por manter suas informações atualizadas.<br>
+                                -Instituições de Bolsas de Sangue: Ao se cadastrar, você concorda em fornecer informações precisas, incluindo CNPJ, nome da empresa, endereço de e-mail, endereço físico e tipos de bolsas de sangue coletadas.
+                                </p>
+                                <h5>3. Uso da Plataforma</h5>                        
+                                <p>-A Plataforma de Doação de Sangue Animal destina-se a incentivar a doação de sangue animal e facilitar a comunicação entre veterinários e instituições de bolsas de sangue. 
+                                    Não nos responsabilizamos por transações ou acordos realizados entre usuários.<br>
+                                    -Veterinários podem acessar informações sobre bolsas de sangue disponíveis e comunicar-se com instituições de bolsas de sangue. <br>                                    
+                                   -Instituições de Bolsas de Sangue podem cadastrar seus estoques de bolsas, atualizar informações e interagir com veterinários.
+                                </p> 
+                                <h5>4. Privacidade e Segurança</h5>   
+                                <p>Leia nossa Política de Privacidade para entender como coletamos, usamos e protegemos suas informações pessoais.
+                                </p>
+                                <h5>5. Responsabilidades dos Usuários</h5>
+                                <p>-Veterinários: Responsáveis por garantir a veracidade das informações fornecidas e por seguir as políticas de doação de sangue animal em vigor.<br>
+
+                                -Instituições de Bolsas de Sangue: Responsáveis por manter informações precisas sobre o estoque de bolsas de sangue e seguir regulamentações locais.
+                                </p>
+                                <h5>6. Alterações nos Termos e Condições</h5>
+                                <p>Reservamo-nos o direito de alterar estes Termos e Condições de Uso a qualquer momento. As alterações serão comunicadas através da plataforma. Ao continuar a utilizar nossos serviços após as alterações, você concorda com os novos termos.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
                 <div class="suporte">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
