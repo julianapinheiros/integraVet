@@ -7,8 +7,15 @@ footer {
 footer .dados {
     text-align: center;
     padding: 20px 0;
+    text-decoration:none;
 }
 
+footer .dados a {
+    text-decoration:none;    
+}
+footer .dados a:hover {
+    color: red;
+}
 .suporte svg {
     margin-right: 5px;
 }

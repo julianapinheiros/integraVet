@@ -1,0 +1,49 @@
+/* ----------Filtro---------- */
+.apresentacao{
+    padding-left: 15px;
+
+}
+.apresentacao h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: #248EB6;
+    font-weight: bold
+  }
+
+.titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filtro label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filtro select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filtro .button__apresentacao {
+  margin-left: 125px;
+  margin-top: 30px;
+}
+
+/* ----------tabela---------- */
+
+.apresentacao table th, td {
+  width: 550px;
+  padding: 20px 50px;
+  text-align: center;
+}

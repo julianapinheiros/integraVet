@@ -45,21 +45,10 @@
   } */
 
   /* Add a black background color to the top navigation */
+/* Add a black background color to the top navigation */
 .topnav {
-  background-image: linear-gradient(to right top, #8ac3eb, #78c4ed, #62c4ee, #46c5ed, #12c6eb);
+  background-color: #248EB6;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  width: 100%;
-  height: 8vh;
-  font-size: 18px;
-  justify-content: center;
-}
-
-.topnav #login {
-  border: 5px solid red;
-  float: right;
 }
 
 /* Style the links inside the navigation bar */
@@ -70,7 +59,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 17px;
 }
 
 /* Change the color of links on hover */
@@ -81,7 +70,7 @@
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-image: linear-gradient(to right top, #8ac3eb, #78c4ed, #62c4ee, #46c5ed, #12c6eb);
+  background-color: #248EB6;
   color: white;
 }
 
@@ -113,18 +102,3 @@
     text-align: left;
   }
 }
-
-/* ----------Logotipo---------- */
-/* 
-.navbar-brand img {
-  height: 100px;
-}
-@media screen and (max-width: 991.98px) {
-  .navbar-brand img {
-    margin-top: -53px;
-  }
-
-  .navbar-toggler {
-    margin-top: -53px !important;
-  }
-} */

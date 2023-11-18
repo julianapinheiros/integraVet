@@ -1,6 +1,6 @@
 /* ----------Faixa na tela---------- */
   
-body, html {
+  body, html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -20,4 +20,8 @@ body, html {
     left: 0;
     width: 34%;
     height: 100px; /* Altura do rodapé */
+  }
+
+  .selecao .botao .btn-light{
+    border: 5px solid red;
   }

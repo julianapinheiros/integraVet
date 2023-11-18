@@ -4,7 +4,8 @@
 <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>IntegraVet-Login</title>
+    <title>SIS IntegraVet-Login</title>
+    <link href="../cssPadrao/header.css" rel="stylesheet" type="text/css" />
     <link href="../cssPadrao/login.css" rel="stylesheet" type="text/css" />
     <link href="../cssPadrao/geral.css" rel="stylesheet" type="text/css" />    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,32 +20,13 @@
 </head>
 
 <body>
-    <div class="container menu">
-        <div class="row">
-            <div class="col-12 mn">
-                <nav class="navbar navbar-expand-lg bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="../tutores/Default.html"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="../tutores/Default.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../tutores/Contatos.html">Contatos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../tutores/SaibaMais.html">Saiba Mais</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
+    <!-- Menu -->
+    <div class="topnav" id="myTopnav">
+        <a href="../tutores/Default.html" class="active">Home</a>
+        <a href="../tutores/Contatos.php">Contatos</a>
+        <a href="../tutores/SaibaMais.html">Saiba Mais</a>
+        <a href="../PrincipalPadrao/Login.php" id="login">Login</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </div>
 
     <div class="container login">
@@ -68,7 +50,7 @@
                         </span>
                         <span><a href="../PrincipalPadrao/Cadastro.php" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primeiro Acesso?</a></span>
                     </div>
-                    <input type="submit" name="submit" class="button__apresentacao" value="Acessar"></li>
+                    <input type="submit" name="submit" class="btn btn-primary " value="Acessar" />
                 </form>
             </div>        
     </div>
