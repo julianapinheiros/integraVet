@@ -69,8 +69,16 @@
         <a href="../tutores/SaibaMais.html">Saiba Mais</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </div>
+
+    <div class="container">
+        <div class="row titulo">
+            <div class="col-12 text-center">
+                <h1>Cadastre-se!</h1>
+            </div>
+        </div>
+    </div>
     
-    <div class="container cadastro mt-5">
+    <div class="container cadastro mt-2">
         <div class="row selecao">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-primary btn-sm" disabled>Cadastro Veterianário</button>
