@@ -57,6 +57,21 @@ body, html {
 
 }
 
+.btn.btn-success, .btn.btn-secondary {
+  color: #fff !important;
+  border-radius: 30px;
+  padding: 8px 30px !important;
+
+}
+/* ---------- Botões Vermelhos ---------- */
+.btn.btn-danger {
+  color: #fff !important;
+    background-color: #a42423;
+    border-radius: 30px;
+    padding: 8px 30px !important;
+
+}
+
 /* ---------- Botão Avançar ---------- */
 
 .btn.btn-info{
@@ -119,4 +134,15 @@ body, html {
 
 .button__apresentacao:hover:before {
   width: 100%;
+}
+
+/* ----------Tabela---------- */ 
+.selecao table th, td {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px){        
+  .selecao .btn-danger{
+    margin-top: 10px;
+  }
 }

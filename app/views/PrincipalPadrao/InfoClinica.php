@@ -31,35 +31,12 @@
     <div class="terco-da-tela">
         <img src="../imagens/pets_cadastro.png" class="img-fluid" alt="campanha">
     </div>
-    <div class="bg-light">
-        <div class="container menu">
-            <div class="row">
-                <div class="col-12 mn">
-                    <nav class="navbar navbar-expand-lg">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="../tutores/Default.html"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="../tutores/Default.html">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../tutores/Contatos.html">Contatos</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../tutores/SaibaMais.html">Saiba Mais</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-    
-                </div>
-            </div>
-        </div>
+     <!-- Menu -->
+     <div class="topnav" id="myTopnav">
+        <a href="../tutores/Default.html" class="active">Home</a>
+        <a href="../tutores/Contatos.php">Contatos</a>
+        <a href="../tutores/SaibaMais.html">Saiba Mais</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </div>
 
     <div class="container cadastro mt-4">

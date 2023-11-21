@@ -48,7 +48,7 @@
     <div class="container">
         <div class="row titulo">
             <div class="col-12 text-center">
-                <h1>Encontre Bolsas de Sangue!</h1>
+                <h1>Encontre Bolsas!</h1>
             </div>
         </div>
     </div>
