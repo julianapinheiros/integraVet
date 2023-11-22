@@ -4,7 +4,9 @@
   background-color: #248EB6;
   overflow: hidden;
 }
-
+.topnav svg {
+  margin-bottom: 2px;
+}
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
@@ -34,6 +36,12 @@
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (min-width: 600px) {
+  .topnav {
+    display: flex;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
