@@ -86,11 +86,32 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
                         <label for="cidade">Cidade:</label>
                         <select id="cidade" name="cidade"  class="form-select">
-                            <option value="" selected disabled>Selecione a cidade</option>                    
-                            <option value="SP" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'SP' ? 'selected': '') :''  ?> >São Paulo</option>
+                        <option value="AC" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'AC' ? 'selected': '') :''  ?> >Acre</option>
+                            <option value="AL" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'AL' ? 'selected': '') :''  ?> >Alagoas</option>
+                            <option value="AP" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'AP' ? 'selected': '') :''  ?> >Amapá</option>
+                            <option value="AM" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'AM' ? 'selected': '') :''  ?> >Amazonas</option>
+                            <option value="BA" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'BA' ? 'selected': '') :''  ?> >Bahia</option>
+                            <option value="CE" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'CE' ? 'selected': '') :''  ?> >Ceará</option>
+                            <option value="ES" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'ES' ? 'selected': '') :''  ?> >Espírito Santo</option>
+                            <option value="GO" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'GO' ? 'selected': '') :''  ?> >Goiás</option>
+                            <option value="MA" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'MA' ? 'selected': '') :''  ?> >Maranhão</option>
+                            <option value="MT" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'MT' ? 'selected': '') :''  ?> >Mato Grosso</option>
+                            <option value="MS" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'MS' ? 'selected': '') :''  ?> >Mato Grosso do Sul</option>
+                            <option value="MG" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'MG' ? 'selected': '') :''  ?> >Minas Gerais</option>
+                            <option value="PA" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'PA' ? 'selected': '') :''  ?> >Pará</option>
+                            <option value="PB" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'PB' ? 'selected': '') :''  ?> >Paraíba</option>
+                            <option value="PE" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'PE' ? 'selected': '') :''  ?> >Pernambuco</option>
+                            <option value="PI" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'PI' ? 'selected': '') :''  ?> >Piauí</option>
                             <option value="RJ" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'RJ' ? 'selected': '') :''  ?> >Rio de Janeiro</option>
-                            <option value="Vitória" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'Vitória' ? 'selected': '') :''  ?> >Vitória</option>
-                            <option value="Belo Horizonte" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'Belo Horizonte' ? 'selected': '') :''  ?> >Belo Horizonte</option>         
+                            <option value="RN" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'RN' ? 'selected': '') :''  ?> >Rio Grande do Norte</option>      
+                            <option value="RS" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'RS' ? 'selected': '') :''  ?> >Rio Grande do Sul</option>
+                            <option value="RO" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'RO' ? 'selected': '') :''  ?> >Rondônia</option>
+                            <option value="RR" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'RR' ? 'selected': '') :''  ?> >Roraima</option>
+                            <option value="SC" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'SC' ? 'selected': '') :''  ?> >Santa Catarina</option>
+                            <option value="SP" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'SP' ? 'selected': '') :''  ?> >São Paulo</option>  
+                            <option value="SE" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'SE' ? 'selected': '') :''  ?> >Sergipe</option>  
+                            <option value="TO" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'TO' ? 'selected': '') :''  ?> >Tocantins</option>  
+                            <option value="DF" <?= isset($_GET['cidade']) == true ? ($_GET['cidade'] == 'DF' ? 'selected': '') :''  ?> >Distrito Federal</option>          
                         </select>
                     </div>
 
