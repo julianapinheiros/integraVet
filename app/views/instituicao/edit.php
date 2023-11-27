@@ -44,35 +44,16 @@
                 <div class="col-12 mn">
                     <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="../instituicao/Default.php"><img src="../imagens/Logo_IntegraVET.png" alt="Logo escrito IntegraVet"></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="Default.php">Meu Estoque</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="CadBolsa.php">Cadastrar Bolsas</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="EncontraBolsa.php">Encontrar Bolsas</a>
-                                    </li>
-                                </ul>
-                                <ul class="navbar-nav sair" aling="text-rigt">
-                                    <li class="nav-item">
-                                        <a class="nav-link active sair" aria-current="page" href="../veterinario/logout.php">Sair</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
     </div>
-    <a href="Default.php">Voltar</a>
+ 
     <div class="container">
         <div class="row titulo">
             <div>
@@ -121,7 +102,16 @@
                                 <input type="hidden" name="id" value= <?php echo $row['id']; ?>>
 
                                 <div class="botao col-12 text-center mt-4">
-                                    <input type="submit" class="btn btn-primary" aria-current="page" name='edit' value='Salvar edição'>
+                                <div class="row">
+                                    <div class="botao col-6 mt-4" style="text-align: left">
+                                        <a class="btn btn-secondary" aria-current="page" href="Default.php">Voltar</a>
+                                    </div>
+                                
+                                    <div class="botao col-6 mt-4" style="text-align: right">
+                                        <input type="submit" class="btn btn-primary" aria-current="page" name='edit' value='Salvar edição'>
+                                    </div>  
+                                    </div>
+                                    
                                 </div>
                             </form>
                         </div>

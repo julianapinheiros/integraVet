@@ -188,7 +188,7 @@
         <footer>
             <div class="row dados">
                 <div class="info">
-                    <span><a href="">Política de Privacidade</a> | <a href="">Termos e condições de uso</a> | <a href="Perfil.html">Meu perfil</a></span>
+                    <span><a href="">Política de Privacidade</a> | <a href="">Termos e condições de uso</a> | <a href="Perfil.php">Meu perfil</a></span>
                 </div>
                 <div class="suporte">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">

@@ -34,7 +34,7 @@
             } 
             else 
             {
-                echo "vou me matar";
+                echo  "ERRO AO SALVAR OS DADOS - POR FAVOR CONTATE O SUPORTE";
             }
     }
 
